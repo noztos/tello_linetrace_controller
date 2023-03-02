@@ -1,0 +1,21 @@
+From ceb33585b9b6aa2cb227554ecf75831731ff1e99 Mon Sep 17 00:00:00 2001
+From: Tamaki Junji <tamaki.junji@gmail.com>
+Date: Thu, 12 May 2022 22:52:45 +0900
+Subject: [PATCH] remove client socket bind code
+
+---
+ djitellopy/tello.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/djitellopy/tello.py b/djitellopy/tello.py
+index 6913a5d..0870474 100644
+--- a/djitellopy/tello.py
++++ b/djitellopy/tello.py
+@@ -110,7 +110,6 @@ def __init__(self,
+         if not threads_initialized:
+             # Run Tello command responses UDP receiver on background
+             client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+-            client_socket.bind(('', Tello.CONTROL_UDP_PORT))
+             response_receiver_thread = Thread(target=Tello.udp_response_receiver)
+             response_receiver_thread.daemon = True
+             response_receiver_thread.start()
