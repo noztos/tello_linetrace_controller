@@ -147,6 +147,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GH_REPO_ACCESS_TOKEN }}
-          repository: https://github.com/exmotion-rd/tello_linetrace_integration
+          repository: exmotion-rd/tello_linetrace_integration
           event-type: update_config
           client-payload: ${{ steps.payload.outputs.result }}
