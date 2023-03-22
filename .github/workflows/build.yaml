@@ -1,4 +1,4 @@
-name: Build linetrace_control
+name: Build
 
 on:
   pull_request:
