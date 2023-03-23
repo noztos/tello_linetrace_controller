@@ -57,4 +57,4 @@ jobs:
           token: ${{ secrets.GH_REPO_ACCESS_TOKEN }}
           repository: exmotion-rd/tello_linetrace_integration
           event-type: update_teleop_key_image
-          client-payload: '{ tag: "${{ github.sha }}" }'
+          client-payload: '{ "tag": "${{ github.sha }}" }'
