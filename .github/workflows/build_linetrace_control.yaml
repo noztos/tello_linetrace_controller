@@ -51,7 +51,7 @@ jobs:
           tags: 964246069091.dkr.ecr.us-east-1.amazonaws.com/linetrace_control:${{ github.sha }}
 
       - name: Dispatch integration repository workflow
-        if: steps.push_docker_image.outcome == success
+        if: ${{ steps.push_docker_image.outcome == 'success' }}
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GH_REPO_ACCESS_TOKEN }}
